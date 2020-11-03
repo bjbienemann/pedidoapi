@@ -21,6 +21,6 @@ Segue o link do script executado pelo flywaydb(responsável pela a evolução do
 
 
 ### Modelo de chamada no Postman
-Segue as colections utilizada para chamada dos endpoints através do Postman.
+Segue para importação as collections utilizada para chamada dos endpoints através do Postman.
 * [Pedido_JSON.postman_collection.json](postman/Pedido_JSON.postman_collection.json)
 * [Pedido_XML.postman_collection.json](postman/Pedido_XML.postman_collection.json)
