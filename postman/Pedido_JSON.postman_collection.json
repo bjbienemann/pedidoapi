@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "26ed5afd-9cf5-44f8-983b-f5bff2c04447",
+		"name": "Pedido JSON",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "buscar",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/pedidos?numeroControle=123&page=0&size=10",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pedidos"
+					],
+					"query": [
+						{
+							"key": "numeroControle",
+							"value": "123"
+						},
+						{
+							"key": "dataCadastro",
+							"value": "2020-10-31",
+							"disabled": true
+						},
+						{
+							"key": "cliente",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inserir",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"numeroControle\": 345,\r\n        \"nomeProduto\": \"Nome do Produto 3\",\r\n        \"valorProduto\": 3,\r\n        \"codigoCliente\": 3,\r\n        \"dataCadastro\": \"2020-10-31\"\r\n    },\r\n    {\r\n        \"numeroControle\": 456,\r\n        \"nomeProduto\": \"Nome do Produto 4\",\r\n        \"valorProduto\": 4,\r\n        \"codigoCliente\": 4,\r\n        \"dataCadastro\": \"2020-10-31\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/pedidos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pedidos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inserir com mais de 10",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"numeroControle\": 1,\r\n        \"nomeProduto\": \"Nome do Produto\",\r\n        \"valorProduto\": 1,\r\n        \"codigoCliente\": 1\r\n    },\r\n    {\r\n        \"numeroControle\": 2,\r\n        \"nomeProduto\": \"Nome do Produto 2\",\r\n        \"valorProduto\": 2,\r\n        \"codigoCliente\": 2\r\n    },\r\n    {\r\n        \"numeroControle\": 3,\r\n        \"nomeProduto\": \"Nome do Produto 3\",\r\n        \"valorProduto\": 3,\r\n        \"codigoCliente\": 3\r\n    },\r\n    {\r\n        \"numeroControle\": 4,\r\n        \"nomeProduto\": \"Nome do Produto 4\",\r\n        \"valorProduto\": 4,\r\n        \"codigoCliente\": 4\r\n    },\r\n    {\r\n        \"numeroControle\": 5,\r\n        \"nomeProduto\": \"Nome do Produto 5\",\r\n        \"valorProduto\": 5,\r\n        \"codigoCliente\": 5\r\n    },\r\n    {\r\n        \"numeroControle\": 6,\r\n        \"nomeProduto\": \"Nome do Produto 6\",\r\n        \"valorProduto\": 6,\r\n        \"codigoCliente\": 6\r\n    },\r\n    {\r\n        \"numeroControle\": 7,\r\n        \"nomeProduto\": \"Nome do Produto 7\",\r\n        \"valorProduto\": 7,\r\n        \"codigoCliente\": 7\r\n    },\r\n    {\r\n        \"numeroControle\": 8,\r\n        \"nomeProduto\": \"Nome do Produto 8\",\r\n        \"valorProduto\": 8,\r\n        \"codigoCliente\": 8\r\n    },\r\n    {\r\n        \"numeroControle\": 9,\r\n        \"nomeProduto\": \"Nome do Produto 9\",\r\n        \"valorProduto\": 9,\r\n        \"codigoCliente\": 9\r\n    },\r\n    {\r\n        \"numeroControle\": 10,\r\n        \"nomeProduto\": \"Nome do Produto 10\",\r\n        \"valorProduto\": 10,\r\n        \"codigoCliente\": 10\r\n    },\r\n    {\r\n        \"numeroControle\": 11,\r\n        \"nomeProduto\": \"Nome do Produto 11\",\r\n        \"valorProduto\": 11,\r\n        \"codigoCliente\": 11\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/pedidos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pedidos"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "22756f57-d1ce-4a49-a335-d550db73beb1",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "ee073862-57fd-4a84-bd6c-0882257e0639",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
